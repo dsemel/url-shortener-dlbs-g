@@ -1,0 +1,181 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+
+    overflow:hidden;
+    background-color: #009688;
+
+
+}
+
+body{
+
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.header{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-top:100px;
+    margin-bottom:50px;
+}
+
+
+
+a{
+    color: #FFFFFF;
+}
+
+#link{
+
+    text-color: #FFFFFF;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+.form-container {
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:center;
+    width: 100%;
+    height:100%;
+    margin-left: 20px;
+}
+
+
+
+.input-url{
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+}
+
+
+.submit-button{
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+
+}
+
+
+
+input{
+
+    text-align:center;
+    padding: 10px 300px 10px 10px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F6F7F8;
+}
+
+button {
+
+
+    font-size: 16px;
+    font-weight:bold;
+
+    border:none;
+    border-radius: 5px;
+
+    padding: 11px 40px;
+
+    color: #FFFFFF;
+    background-color: #00BCD4;
+    cursor: pointer;
+    border:0;
+}
+
+button:hover {
+    background-color: #B2DFDB;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+::-webkit-input-placeholder{
+
+    text-align:left;
+
+}
+
+.footer{
+
+    display:flex;
+
+    margin-top:300px;
+    margin-left:10px;
+    align-items:left;
+}
+
+@media only screen and (max-width: 480px){
+
+
+    .header{
+
+        flex-direction:column;
+        justify-content:center;
+        width:50%;
+        margin:auto;
+
+
+    }
+
+
+
+    .form-container{
+
+
+        overflow:hidden;
+        margin:auto;
+
+
+
+    }
+
+    input{
+        margin-top:30px;
+        padding-left:0;
+        padding-right:10px;
+    }
+
+    button, button:active, button:hover{
+
+        font-size:15px;
+        margin-top:30px;
+    }
+
+    button:hover {
+        background-color: #00BCD4;
+    }
+
+
+}

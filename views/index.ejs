@@ -1,0 +1,79 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|EB+Garamond|Encode+Sans+Expanded|Inconsolata|Karla|Manuale|Nunito+Sans|Pontano+Sans|Roboto+Slab:300|Rokkitt|Sanchez" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="header">
+    <div class="logo">
+        <!-- Linking icon by Icons8 -->
+        <img class="icon icons8-Linking" width="64" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACgklEQVR4Xu2a/VHDMAzFnzaACYAJgAlgA2ADOgEwCTABbABMQJmAdgJgAzYQpzv3zvhoJJO6/ojzrx3F7yfJqZtHmPhFE9ePDqBXwMQJ9BaYeAH0TTC6BZh5H8AVgFMAR4VU0ALAHMA9EX3GrCkKADPfAriOeUCGuXdEdGN9rhkAM7+6rFtj55z3TEQXlgWYADDznSt7S8xS5kg7qNWqAnA9/xGo+nKtMCei75yKmXnHVaYkaS9Yy4G2J1gAhNkX8Ue5hYfQHQjZDH0IahVYALwHu/0FET3nzPq6ZzPzOYAnb3xBRMdDa7UA4CDAbmnZX63vr3YlokGN0QC0gFplMHMIVLtlcDxcTxhfW28HoOGPJRobT5uvjfcKCHo8NmFbbwEto3+83i4BPKy7r7oKiAHAzIPiJVazACzimwUwIH4WtkNzFTAknogetU1OGw9bsKhNUBMvi9cEauPFArCIbxaAVXyTAGLENwcgVnxTAP4jvhkA/xXfBIAx4qsHMFZ81QA2Ib5aAJsSXyWATYq3HKWL+ym8BsBMDjYWQbFzigPgytb/YyOZeEuLZDsMuUqQf3CSZH4lrMgKiC3jMfM7gODDS3EfRsZk13Jvr4BeAb+/PfYWKO3rsKWPx8zpe0DqPQDA5AwS4rs59MqyJovMkogGzZyWDyOhSUqcmMel2WScSUr8TOJkXV0bMUlJwNAmJxDEg/eWG4QTfgJAEuWLFwjjbXLuhDVdo6R3yhJr3NmYV9QW730hIrHMqZe6B/gRKrHMqn3va4oC4NpB+kz6X+zy/ttBpZ1wwtLZ5cUpns4un1BAttDRFZBtpYke3AEkAltN2F4B1aQq0UJ7BSQCW03YH1XrIF9wQCJDAAAAAElFTkSuQmCC">
+
+    </div>
+    <h1>
+        URL Shortener
+    </h1>
+</div>
+
+
+<div class = "form-container">
+
+
+    <form method="post" action="/">
+        <div class ="input-url" style="float:left">
+
+            <input id="url-field" type="text"  placeholder="Paste a link..." name="save_url">
+
+            <div class = "submit-button">
+
+
+                <button type="submit" class="btn-shorten" id="button_ID">SHORTEN</button>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
+
+<div id ="link">
+
+    <a href="<%=save_url %>"><%=save_url %></a>
+
+
+
+</div>
+
+<div class = "footer">
+
+    <p>
+        <a href="https://icons8.com">Icon pack by Icons8</a>
+    </p>
+</div>
+<!-- Your web-app is https, so your scripts need to be too -->
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<!--<script src="/public/javascripts/shorten.js"></script> -->
+</body>
+</html>
