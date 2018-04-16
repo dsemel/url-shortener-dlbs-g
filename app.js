@@ -23,7 +23,7 @@ var mongoose = require('mongoose');
 var dotenv = require('dotenv');
 dotenv.config();
 
-var urlDB = process.env.MONGOLAB_URI;
+var urlDB = process.env.MONGODB_URI;
 
 var localUrl = process.env.LOCAL_URL;
 
