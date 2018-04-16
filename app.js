@@ -27,7 +27,7 @@ var urlDB = process.env.MONGODB_URI;
 
 //var localUrl = process.env.LOCAL_URL;
 
-var localUrl = 'https://short-ds.herokuapp.com/';
+var localUrl = 'https://url-shortener-dlbs-g.herokuapp.com/';
 
 
 
