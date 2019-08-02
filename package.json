@@ -13,8 +13,12 @@
     "ejs": "^2.5.8",
     "express": "~4.15.5",
     "jade": "~1.11.0",
+    "mime": "^2.3.1",
+    "mime-db": "^1.36.0",
+    "mime-types": "^2.1.19",
     "mongoose": "^4.10.8",
     "morgan": "~1.9.0",
+    "npm": "^6.10.2",
     "serve-favicon": "~2.4.5",
     "shortid": "^2.2.8",
     "valid-url": "^1.0.9"
