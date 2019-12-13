@@ -18,7 +18,7 @@
     "mime-types": "^2.1.19",
     "mongoose": "^4.10.8",
     "morgan": "^1.9.1",
-    "npm": "^6.10.2",
+    "npm": "^6.13.4",
     "serve-favicon": "~2.4.5",
     "shortid": "^2.2.8",
     "valid-url": "^1.0.9"
