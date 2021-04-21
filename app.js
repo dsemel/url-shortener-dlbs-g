@@ -25,6 +25,8 @@ dotenv.config();
 
 var urlDB = process.env.MONGODB_URI;
 
+var mongoLink = process.env.MONGO_DB_ATLAS;
+
 //var localUrl = process.env.LOCAL_URL;
 
 var localUrl = 'https://url-shortener-dlbs-g.herokuapp.com/';
@@ -33,7 +35,7 @@ var localUrl = 'https://url-shortener-dlbs-g.herokuapp.com/';
 
 var path = require('path');
 
-var promise = mongoose.connect(urlDB, {
+var promise = mongoose.connect(mongoLink, {
 
     useMongoClient: true,
 });
