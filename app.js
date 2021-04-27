@@ -65,10 +65,6 @@ app.get("/", function (request, response) {
 app.post('/', function(request, response){
 
 
-    if(err){
-        console.log(err);
-    }
-
     var longUrl = request.body.save_url;
 
     if(!longUrl.match(/^[a-zA-Z]+:\/\//)){
