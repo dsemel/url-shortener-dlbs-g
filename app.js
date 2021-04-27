@@ -27,9 +27,9 @@ var urlDB = process.env.MONGODB_URI;
 
 var mongoLink = process.env.MONGO_DB_ATLAS;
 
-//var localUrl = process.env.LOCAL_URL;
+var localUrl = process.env.LOCAL_URL;
 
-var localUrl = 'https://url-shortener-dlbs-g.herokuapp.com/';
+//var localUrl = 'https://url-shortener-dlbs-g.herokuapp.com/';
 
 
 
@@ -59,7 +59,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("/", function (request, response) {
 
     //response.sendFile(__dirname + '/views/index.html');
-    response.render('index', {save_url: ""});
+    response.render('index', {save_url: "", original_url: "", text1: ""});
 });
 
 app.post('/', function(request, response){
@@ -84,7 +84,7 @@ app.post('/', function(request, response){
 
 
 
-            response.render('index', {save_url: shortUrl});
+            response.render('index', {save_url: shortUrl, original_url: longUrl, text1: "redirected from url below:"});
 
 
         }
@@ -107,7 +107,7 @@ app.post('/', function(request, response){
 
                 //response.send(shortUrl);
                 //response.send({'shortUrl': shortUrl});
-                response.render('index', {save_url: shortUrl});
+                response.render('index', {save_url: shortUrl, original_url: longUrl, text1: "redirected from url below:"});
 
 
             });
