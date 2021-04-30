@@ -37,7 +37,9 @@ var path = require('path');
 
 var promise = mongoose.connect(mongoLink, {
 
-    useMongoClient: true,
+   // useMongoClient: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 mongoose.Promise = global.Promise;
