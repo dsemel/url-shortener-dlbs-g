@@ -64,7 +64,13 @@ app.get("/", function (request, response) {
     response.render('index', {save_url: "", original_url: "", text1: ""});
 });
 
-app.post('/', function(request, response){
+app.post('/', function(request, response, err){
+
+    if (err) {
+        console.log(err);
+
+
+    }
 
 
     var longUrl = request.body.save_url;
@@ -117,7 +123,14 @@ app.post('/', function(request, response){
     });
 });
 
-app.get('/:encoded_id', function(request, response) {
+
+app.get('/:encoded_id', function(request, response,err) {
+
+    if (err) {
+        console.log(err);
+
+
+    }
 
     var shortId = request.params.encoded_id;
 
@@ -140,6 +153,7 @@ app.get('/:encoded_id', function(request, response) {
     });
 
 });
+
 
 
 
