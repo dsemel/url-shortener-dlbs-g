@@ -72,8 +72,11 @@ app.post('/', function(request, response, err){
 
     }
 
+    if(request.body.save_url) {
 
-    var longUrl = request.body.save_url;
+        var longUrl = request.body.save_url;
+
+    }
 
     if(!longUrl.match(/^[a-zA-Z]+:\/\//)){
 
