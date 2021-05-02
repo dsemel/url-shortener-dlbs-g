@@ -72,11 +72,10 @@ app.post('/', function(request, response, err){
 
     }
 
-    if(request.body.save_url) {
 
         var longUrl = request.body.save_url;
 
-    }
+
 
     if(!longUrl.match(/^[a-zA-Z]+:\/\//)){
 
@@ -137,23 +136,27 @@ app.get('/:encoded_id', function(request, response,err) {
 
     var shortId = request.params.encoded_id;
 
-
-    UrlB.findOne({short_id: shortId}, function (err, doc) {
-        if (err) {
-
-            response.redirect(localUrl);
-
-        }
-
-        else {
+    if(shortId !== " ") {
 
 
-            response.redirect(doc.long_url);
+        UrlB.findOne({short_id: shortId}, function (err, doc) {
+            if (err) {
 
-        }
+                response.redirect(localUrl);
+
+            }
+
+            else {
 
 
-    });
+                response.redirect(doc.long_url);
+
+            }
+
+
+        });
+
+    }
 
 });
 
