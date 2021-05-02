@@ -126,7 +126,7 @@ app.post('/', function(request, response, err){
 });
 
 
-app.get('/:encoded_id', function(request, response,err) {
+app.use('/:encoded_id', function(request, response,err) {
 
     if (err) {
         console.log(err);
