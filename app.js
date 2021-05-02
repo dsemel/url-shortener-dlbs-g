@@ -58,9 +58,14 @@ var port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (request, response) {
+app.get("/", function (request, response, err) {
 
     //response.sendFile(__dirname + '/views/index.html');
+    if (err) {
+        console.log(err);
+
+    }
+
     response.render('index', {save_url: "", original_url: "", text1: ""});
 });
 
