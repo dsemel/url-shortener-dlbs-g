@@ -67,6 +67,8 @@ app.get("/", function (request, response, err) {
     }
 
     response.render('index', {save_url: "", original_url: "", text1: ""});
+
+
 });
 
 app.post('/', function(request, response, err){
@@ -128,10 +130,12 @@ app.post('/', function(request, response, err){
             });
         }
     });
+
+
 });
 
 
-app.use('/:encoded_id', function(request, response,err) {
+app.get('/:encoded_id', function(request, response,err) {
 
     if (err) {
         console.log(err);
@@ -141,27 +145,31 @@ app.use('/:encoded_id', function(request, response,err) {
 
     var shortId = request.params.encoded_id;
 
-    if(shortId !== " ") {
+
 
 
         UrlB.findOne({short_id: shortId}, function (err, doc) {
-            if (err) {
 
-                response.redirect(localUrl);
+            if(doc) {
 
+                if (err) {
+
+                    response.redirect(localUrl);
+
+                }
+
+
+                else {
+
+
+                    response.redirect(doc.long_url);
+
+                }
             }
-
-            else {
-
-
-                response.redirect(doc.long_url);
-
-            }
-
 
         });
 
-    }
+
 
 });
 
